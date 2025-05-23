@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <!-- Basic Meta Tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Qveto Internship Program | Launch Your Tech Career</title>
+        <meta name="description" content="Apply for Qveto's tech internship program. Gain hands-on experience in software development, AI/ML, cybersecurity and more. Start your career with industry experts.">
+        <meta name="keywords" content="Qveto, tech internship, software internship, AI internship, machine learning internship, cybersecurity internship, computer science internship, coding internship">
+        <!-- Canonical URL -->
+        <link rel="canonical" href="https://qveto.com/internship">
+        <!-- Add this in your <head> -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- Favicon -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+        
+        <!-- Open Graph / Facebook Meta Tags -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://qveto.com/internship">
+        <meta property="og:title" content="Qveto Internship Program | Launch Your Tech Career">
+        <meta property="og:description" content="Apply for Qveto's tech internship program. Gain hands-on experience in software development, AI/ML, cybersecurity and more.">
+        <meta property="og:image" content="https://qveto.com/images/internship-og-image.jpg">
+        <meta property="og:image:width" content="1200">
+        <meta property="og:image:height" content="630">
+        <meta property="og:site_name" content="Qveto">
+        
+        <!-- Twitter Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@qvetotech">
+        <meta name="twitter:creator" content="@qvetotech">
+        <meta name="twitter:title" content="Qveto Internship Program | Launch Your Tech Career">
+        <meta name="twitter:description" content="Apply for Qveto's tech internship program. Gain hands-on experience in software development, AI/ML, cybersecurity and more.">
+        <meta name="twitter:image" content="https://qveto.com/images/internship-twitter-card.jpg">
+        
+        <!-- Social Media Links -->
+        <link rel="me" href="https://www.instagram.com/qvetotech/" title="Qveto on Instagram">
+        <link rel="me" href="https://www.linkedin.com/company/106490943/" title="Qveto on LinkedIn">
+        
+        <!-- Structured Data / Schema Markup -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "name": "Qveto",
+          "url": "https://qveto.com",
+          "logo": "https://qveto.com/images/logo.png",
+          "sameAs": [
+            "https://www.instagram.com/qvetotech/",
+            "https://www.linkedin.com/company/106490943/"
+          ],
+          "description": "Qveto provides cutting-edge technology internships to help students launch their careers in tech.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "City",
+            "addressRegion": "State",
+            "postalCode": "ZipCode",
+            "addressCountry": "Country"
+          }
+        }
+        </script>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <!-- CSS and other head elements -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+        <!-- Rest of your head content -->
+    <style>
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a0ca3;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: var(--dark);
+        }
+        .hide{
+            display: none;
+        }
+        
+
+ 
+
+    
+        .internship-container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            perspective: 1000px;
+            width: 90%;
+        }
+        
+        .internship-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .internship-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .hero-banner {
+            height: 200px;
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+        
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: pulse 15s infinite linear;
+        }
+        
+        @keyframes pulse {
+            0% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.1; }
+            100% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 2rem;
+        }
+        
+        .hero-content h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .hero-content p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .important-details {
+            background-color: #f8f9fa;
+            padding: 1.5rem 2.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .important-details h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        
+        .details-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .detail-item {
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            font-size: 1.05rem;
+        }
+        
+        .detail-item strong {
+            color: var(--primary-dark);
+            font-weight: 600;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .social-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+        
+        .social-link:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+        
+        .form-container {
+            padding: 3rem;
+        }
+        
+        .form-title {
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: var(--primary);
+            font-size: 2rem;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .form-title::after {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 3px;
+        }
+        
+        .form-group {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 500;
+            color: var(--dark);
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .input-field {
+            position: relative;
+        }
+        
+        input, select, textarea {
+            width: 100%;
+            padding: 18px;
+            border: 2px solid #e9ecef;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: #f8f9fa;
+        }
+        
+        input:focus, select:focus, textarea:focus {
+            border-color: var(--primary);
+            outline: none;
+            background-color: white;
+            box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.2);
+        }
+        
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .file-upload {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%;
+        }
+        
+        .file-upload-btn {
+            width: 100%;
+            padding: 18px;
+            background: #f8f9fa;
+            border: 2px dashed #ced4da;
+            border-radius: 12px;
+            text-align: center;
+            color: #6c757d;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1.1rem;
+        }
+        
+        .file-upload-btn:hover {
+            background: #e9ecef;
+            border-color: #adb5bd;
+        }
+        
+        .file-upload-input {
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        
+        .btn-submit {
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 600;
+            width: 100%;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            margin-top: 1rem;
+        }
+        .btn-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem; /* optional for spacing */
+}
+
+        .btn-Accept {
+            background: linear-gradient(45deg, var(--primary), var(--primary-dark));
+            color: white;
+            border: none;
+            padding: 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            font-weight: 600;
+            width: 20%;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            position: relative;
+            overflow: hidden;
+            margin-top: 1rem;
+            
+        }
+        
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+        
+        .btn-submit:active {
+            transform: translateY(0);
+        }
+        
+        .btn-submit::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 5px;
+            height: 5px;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 0;
+            border-radius: 100%;
+            transform: scale(1, 1) translate(-50%);
+            transform-origin: 50% 50%;
+        }
+        
+        .btn-submit:focus:not(:active)::after {
+            animation: ripple 1s ease-out;
+        }
+        
+        /* Floating label animation */
+        .float-label {
+            position: relative;
+        }
+        
+        .float-label label {
+            position: absolute;
+            top: 18px;
+            left: 18px;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+        
+        .float-label input:focus + label,
+        .float-label input:not(:placeholder-shown) + label,
+        .float-label select:focus + label,
+        .float-label select:not([value=""]) + label {
+            top: -12px;
+            left: 12px;
+            font-size: 0.9rem;
+            background: white;
+            padding: 0 8px;
+            color: var(--primary);
+        }
+        
+        /* Animated checkmark for successful submission */
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 3rem;
+        }
+        
+        .checkmark {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 4;
+            stroke: #4bb71b;
+            stroke-miterlimit: 10;
+            box-shadow: 0 0 0 rgba(75, 183, 27, 0.4);
+            animation: checkmark-fill 0.4s ease-in-out 0.4s forwards, checkmark-scale 0.3s ease-in-out 0.9s both;
+        }
+        
+        .checkmark-circle {
+            stroke-dasharray: 166;
+            stroke-dashoffset: 166;
+            stroke-width: 4;
+            stroke-miterlimit: 10;
+            stroke: #4bb71b;
+            fill: none;
+            animation: checkmark-stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+        }
+        
+        .checkmark-check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: checkmark-stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+        }
+        
+        @keyframes checkmark-stroke {
+            100% { stroke-dashoffset: 0; }
+        }
+        
+        @keyframes checkmark-scale {
+            0%, 100% { transform: none; }
+            50% { transform: scale3d(1.1, 1.1, 1); }
+        }
+        
+        @keyframes checkmark-fill {
+            100% { box-shadow: inset 0 0 0 100px rgba(75, 183, 27, 0.1); }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .internship-container {
+                margin: 1rem;
+                width: 95%;
+            }
+            
+            .form-container {
+                padding: 2rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1rem;
+            }
+            
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .important-details {
+                padding: 1.5rem;
+            }
+            
+            .form-title {
+                font-size: 1.8rem;
+            }
+            
+            input, select, textarea, .file-upload-btn {
+                padding: 16px;
+                font-size: 1rem;
+            }
+            
+            .btn-submit {
+                padding: 18px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (min-width: 1600px) {
+            .internship-container {
+                max-width: 1200px;
+            }
+            
+            .hero-banner {
+                height: 250px;
+            }
+            
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.5rem;
+            }
+            
+            .details-grid {
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .form-container {
+                padding: 4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="internship-container animate__animated animate__fadeIn">
+        <div class="internship-card">
+            <!-- Animated Hero Banner -->
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h1>Join Qveto's Internship Program</h1>
+                    <p>Launch your career in tech with hands-on experience</p>
+                </div>
+            </div>
+            
+            <!-- Main Form Container -->
+            <div class="form-container">
+    <h2 class="form-title">Acceptance Form</h2>
+    <form id="internshipApplication">
+        <div class="form-group float-label">
+            <input type="email" id="email" name="email" placeholder=" " required 
+                   pattern="[a-z0-9]+([._-][a-z0-9]+)*@[a-z0-9-]+\.[a-z]{2,}" 
+                   title="Enter a valid email address (e.g., example@mail.com)">
+            <label for="email">Enter the registered mail id</label>
+        </div>
+        
+        <div class="form-group float-label hide">
+            <input type="text" id="fullName" name="fullName" placeholder=" " required 
+                   pattern="^(?![ .]+$)[A-Za-z. ]+$"
+                   title="Only letters, single spaces, and dots are allowed. The name cannot be only spaces or symbols.">
+            <label for="fullName">Full Name*</label>
+        </div>
+        
+        <div class="form-group float-label hide">
+            <input type="text" id="program" name="program" required>
+             
+            </input>
+            <label for="program">Preferred Internship Program*</label>
+        </div>
+
+        <div class="form-group float-label hide">
+            <input type="text" id="duration" name="duration" required>
+                
+            </input>
+            <label for="duration">Internship Duration*</label>
+        </div>
+        
+        <div class="form-group hide" id="text1">
+            <p><strong>Pay For Live Training & Project Participation Fee (Refundable)</strong></p>
+        </div>
+        
+        <p class="hide" style="color: #6c757d; margin-bottom: 3px;" id="text2">
+            It confirms your dedication to complete the full training and our project.
+        </p>
+        <input type="text" class="form-group hide" id="payment">
+        <button type="button" class="btn-submit" id="Next" onclick="show()">Next</button>
+        
+        <div class="btn-wrapper">
+            <button type="button" class="hide btn-Accept" id="Accept" onclick="startpayment()">Accept</button>
+        </div>
+    </form>
+</div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script>
+        
+
+      async function show() {
+    // Show all form fields
+  
+
+    let email = document.getElementById("email").value;
+
+    // Regular expression for validating email format
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!email.match(emailRegex)) {
+        alert("Please enter a valid email address");
+        return;
+    }
+
+    // Make a POST request to check if the email exists in the backend
+    try {
+        const response = await fetch("http://localhost:3000/check-email", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ email: email }),
+        });
+
+        if (response.status === 429) {
+            alert("You have tried too many times. Please try again after 10 minutes.");
+            return;
+        }
+
+        const data = await response.json();
+        
+        if (data.exists) {
+
+document.getElementById("fullName").parentElement.classList.remove("hide");
+ document.getElementById("program").parentElement.classList.remove("hide");
+    document.getElementById("duration").parentElement.classList.remove("hide");
+    document.getElementById("Accept").classList.remove("hide");
+    document.getElementById("text1").classList.remove("hide");
+    document.getElementById("text2").classList.remove("hide");
+    document.getElementById("payment").classList.remove("hide");
+    document.getElementById("Next").classList.add("hide");
+
+            document.getElementById("email").disabled = true;
+            // Populate fields from the backend response
+            document.getElementById("fullName").value = data.data["Full Name (Will printed on certificate)"];
+            document.getElementById("program").value = data.data["Preferred Internship Program"];
+            document.getElementById("duration").value = data.data["Internship Duration"];
+            document.getElementById("fullName").disabled=true
+            document.getElementById("program").disabled=true
+            document.getElementById("duration").disabled=true
+            let durationValue = data.data["Internship Duration"].match(/\d+/)[0]; // This extracts the number (1, 2, 3)
+                document.getElementById("payment").value =
+                  durationValue == 1
+                    ? "249"
+                    : durationValue == 2
+                    ? "299"
+                    : "349";
+            document.getElementById("payment").disabled=true
+   
+        } else {
+            alert("Please Enter Registered Email id");
+            
+        }
+    } catch (error) {
+        console.error("Error:", error);
+        alert("An error occurred while verifying your email. Please try again.");
+    }
+}
+
+async function startpayment() {
+    const name = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const program = document.getElementById('program').value;
+    const duration = document.getElementById('duration').value;
+
+    // Basic validation
+    if (!name || !email || !program || !duration) {
+        alert("Please fill in all required fields.");
+        return;
+    }
+
+    try {
+        const response = await fetch('http://localhost:3000/create-order', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ 
+                name, 
+                email, 
+                internshipType: program,
+                duration: duration.includes('1') ? '1' : duration.includes('2') ? '2' : '3'
+            })
+        });
+
+        if (!response.ok) {
+            if (response.status === 429) {
+                alert('Too many attempts. Please try again in 10 minutes.');
+            } else {
+                const errorData = await response.json();
+                alert(errorData.error || 'Error creating order. Please try again later.');
+            }
+            return;
+        }
+
+        const { order } = await response.json();
+        console.log(order);
+
+        const options = {
+            "key": "rzp_live_G2YH4rqtLUIuuj",
+            "amount": order.amount,
+            "currency": "INR",
+            "name": "Qveto Technologies",
+            "description": "Pay for your internship",
+            "order_id": order.id,
+            "handler": async function (response) {
+                console.log('Payment handler response:', response);
+                const paymentResponse = await fetch('http://localhost:3000/verify-payment', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        razorpay_payment_id: response.razorpay_payment_id,
+                        razorpay_order_id: response.razorpay_order_id,
+                        razorpay_signature: response.razorpay_signature,
+                        name, 
+                        email, 
+                        internshipType: program,
+                        duration: duration.includes('1') ? '1' : duration.includes('2') ? '2' : '3'
+                    })
+                });
+
+                if (!paymentResponse.ok) {
+
+                    console.log(paymentResponse)
+                    alert('Error verifying payment');
+                    return;
+                }
+
+                const paymentMessage = await paymentResponse.text();
+                alert(paymentMessage);
+                // Redirect after successful payment
+                window.location.href = 'https://qveto.com/';
+            },
+            "prefill": {
+                "name": name,
+                "email": email
+            },
+            "theme": {
+                "color": "#4361ee" // Matching your primary color
+            }
+        };
+
+        const rzp1 = new Razorpay(options);
+        rzp1.open();
+    } catch (error) {
+        console.error('Error:', error);
+        alert('An error occurred. Please try again.');
+    }
+}
+
+    </script>
+</body>
+</html>
