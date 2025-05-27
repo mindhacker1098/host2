@@ -501,6 +501,10 @@
                 padding: 18px;
                 font-size: 1.1rem;
             }
+            .btn-Accept {
+                padding: 18px;
+                font-size: 1.1rem;
+            }
         }
         
         @media (min-width: 1600px) {
@@ -597,12 +601,11 @@
         
 
       async function show() {
-    // Show all form fields
+
   
 
     let email = document.getElementById("email").value;
 
-    // Regular expression for validating email format
     const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if (!email.match(emailRegex)) {
@@ -610,7 +613,7 @@
         return;
     }
 
-    // Make a POST request to check if the email exists in the backend
+    
     try {
         const response = await fetch("https://server.qveto.in/check-email", {
             method: "POST",
@@ -639,14 +642,14 @@ document.getElementById("fullName").parentElement.classList.remove("hide");
     document.getElementById("Next").classList.add("hide");
 
             document.getElementById("email").disabled = true;
-            // Populate fields from the backend response
+            
             document.getElementById("fullName").value = data.data["Full Name (Will printed on certificate)"];
             document.getElementById("program").value = data.data["Preferred Internship Program"];
             document.getElementById("duration").value = data.data["Internship Duration"];
             document.getElementById("fullName").disabled=true
             document.getElementById("program").disabled=true
             document.getElementById("duration").disabled=true
-            let durationValue = data.data["Internship Duration"].match(/\d+/)[0]; // This extracts the number (1, 2, 3)
+            let durationValue = data.data["Internship Duration"].match(/\d+/)[0]; 
                 document.getElementById("payment").value =
                   durationValue == 1
                     ? "249"
@@ -738,7 +741,7 @@ async function startpayment() {
 
                 const paymentMessage = await paymentResponse.text();
                 alert(paymentMessage);
-                // Redirect after successful payment
+                
                 window.location.href = 'https://qveto.com/';
             },
             "prefill": {
@@ -746,7 +749,7 @@ async function startpayment() {
                 "email": email
             },
             "theme": {
-                "color": "#4361ee" // Matching your primary color
+                "color": "#4361ee"
             }
         };
 
